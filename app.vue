@@ -1,6 +1,9 @@
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
-  </div>
+  <ScnButton>
+    Hello
+  </ScnButton>
 </template>
+
+<script setup lang="ts">
+</script>
+
