@@ -1,6 +1,14 @@
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      dbBaseUrl: '',
+      vidBaseUrl: '',
+      dbImgBaseUrl: '',
+      apiHeaderKey: ''
+    }
+  },
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
   modules: ['@nuxt/eslint', 'shadcn-nuxt'],

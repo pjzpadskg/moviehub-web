@@ -1,9 +1,3 @@
 <template>
-  <ScnButton>
-    Hello
-  </ScnButton>
+  <NuxtPage />
 </template>
-
-<script setup lang="ts">
-</script>
-
