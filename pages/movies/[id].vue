@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const route = useRoute()
-const embedUrl = computed(() => `https://vidsrc.xyz/embed/movie/${route.params.id}`)
+const embedUrl = computed(() => `https://embed.su/embed/movie/${route.params.id}`)
 </script>
 
 <template>
