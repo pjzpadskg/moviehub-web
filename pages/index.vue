@@ -46,15 +46,16 @@ const { data: series, isError: isSeriesError, isPending: isSeriesPending } = use
 
 <template>
   <div class="bg-black text-white min-h-screen">
-    <header class="flex items-center justify-between px-6 py-4 bg-black shadow-md">
-      <h1 class="text-2xl font-bold">MovieHub</h1>
-    </header>
-
-    <ScnTabs v-model="activeTab" class="p-6">
-      <ScnTabsList>
-        <ScnTabsTrigger value="movies">Movies</ScnTabsTrigger>
-        <ScnTabsTrigger value="series">Series</ScnTabsTrigger>
-      </ScnTabsList>
+    <ScnTabs v-model="activeTab">
+      <header class="flex items-center justify-between px-6 py-4">
+        <h1 class="text-3xl font-bold text-white">MovieHub</h1>
+        <div class="flex space-x-4">
+          <ScnTabsList class="w-[220px]">
+            <ScnTabsTrigger value="movies" class="text-lg">Movies</ScnTabsTrigger>
+            <ScnTabsTrigger value="series" class="text-lg">Series</ScnTabsTrigger>
+          </ScnTabsList>
+        </div>
+      </header>
       <ScnTabsContent value="movies">
         <section v-if="isMoviePending" class="text-center text-gray-400">
           Loading movies...
