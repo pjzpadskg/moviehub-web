@@ -1,6 +1,14 @@
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
+  app: {
+    head: {
+      title: 'MovieHub',
+      link: [
+        { rel: 'icon', type: 'image/png', href: '/moviehub-icon.png' }
+      ]
+    }
+  },
   runtimeConfig: {
     public: {
       dbBaseUrl: '',
