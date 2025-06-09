@@ -1,5 +1,6 @@
 import type { RawMovie } from 'Movie'
 import type { RawSeries } from 'Series'
+import type { RawShow } from 'Show'
 
 export interface Response {
   page: number
@@ -14,3 +15,8 @@ export interface MovieResponse extends Response {
 export interface SeriesResponse extends Response {
   results: RawSeries[]
 }
+
+export interface ShowResponse extends Response {
+  results: RawShow[]
+}
+
