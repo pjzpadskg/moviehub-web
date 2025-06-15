@@ -26,6 +26,15 @@ const { data: series, isError: isSeriesError, isPending: isSeriesPending } = use
     backdrop: `${imageUrl}${series.backdrop_path}`
   })) as Series[]
 })
+
+const getTvLink = () => {
+  if (series.value) {
+    return ({
+      path: `/series/${series.value[selectedIndex.value].id}`,
+      query: { season: 1, episode: 1 }
+    })
+  }
+}
 </script>
 
 <template>
@@ -45,7 +54,7 @@ const { data: series, isError: isSeriesError, isPending: isSeriesPending } = use
     <div class="absolute bottom-8 left-6 z-10 text-white space-y-2">
       <h2 class="text-4xl font-bold">{{ series[selectedIndex].title }}</h2>
       <ScnButton asChild variant="ghost">
-        <NuxtLink :to="`/series/${series[selectedIndex].id}`">Watch Now</NuxtLink>
+        <NuxtLink :to="getTvLink()">Watch Now</NuxtLink>
       </ScnButton>
     </div>
   </section>
